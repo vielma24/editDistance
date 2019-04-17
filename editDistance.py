@@ -1,11 +1,9 @@
-# Author: Chary Vielma # 5192
-# Email: chary.vielma@csu.fullerton.edu
-# CPSC 485 Bioinformatics
-# Project 1 - Edit Distance / Alignment
+# Edit Distance / Alignment Program
 # Description: Given 2 strings, this program constructs an edit distance
 #              graph using a 2D array, provides the edit distance value, 
 #              and performs an alignment of the two strings to reflect
-#              the calculated edits.
+#              the calculated edits
+
 import sys
 
 def editDist(str1, str2):
@@ -87,8 +85,6 @@ def editDist(str1, str2):
 
       # update the position to check next
       position = origin
-
-
       
    # output matrix and alignment
    print("The matrix:\n")
