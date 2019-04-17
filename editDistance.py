@@ -1,9 +1,11 @@
-# Edit Distance / Alignment Program
+# Author: Chary Vielma # 5192
+# Email: chary.vielma@csu.fullerton.edu
+# CPSC 485 Bioinformatics
+# Project 1 - Edit Distance / Alignment
 # Description: Given 2 strings, this program constructs an edit distance
 #              graph using a 2D array, provides the edit distance value, 
 #              and performs an alignment of the two strings to reflect
-#              the calculated edits
-
+#              the calculated edits.
 import sys
 
 def editDist(str1, str2):
@@ -86,15 +88,15 @@ def editDist(str1, str2):
       # update the position to check next
       position = origin
 
+
+      
    # output matrix and alignment
    print("The matrix:\n")
-   print('-' * len(matrix[1]) * 6)
+   printDashes(matrix[0])
    print('\n')
    for row in matrix:
-      for num in row:
-        print("{:4}".format(num), ':' ,end="")
-      print('\n')
-      print('-' * len(row) * 6)
+      print('  :  '.join(map(str,row)))
+      printDashes(row)
       print('\n')
 
    print("The edit distance is: ", matrix[len(str1)][len(str2)])
@@ -104,6 +106,10 @@ def editDist(str1, str2):
    print(alignment2)
 
    return
+
+def printDashes(row):
+   for i in range(len('  :  '.join(map(str,row)))):
+      print("-", end="")
 
 if __name__ == '__main__':
    word1 = word2 = ''
